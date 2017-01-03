@@ -1,0 +1,25 @@
+var arrSort=[10,9,19,8,1,12,14,24,34,54,5,4,2,99,2,3,1,6];
+vaigATenirSort(arrSort);
+
+function vaigATenirSort(arrayToSort){
+    console.log('Pre: ' + arrayToSort);
+    var totalElements = arrayToSort.length - 1;
+    var i = 0;
+    var j = totalElements;
+
+    while(i<totalElements){
+        if(i==j){
+            i++;
+            j = totalElements;
+        } else {
+            if(arrayToSort[i] > arrayToSort[j]){
+                aux = arrayToSort[j];
+                arrayToSort[j] = arrayToSort[i];
+                arrayToSort[i] = aux;
+            }
+            j--;
+        }
+    }
+
+    console.log('Post: ' + arrayToSort);
+}

@@ -1,0 +1,15 @@
+function cleanString(valueToClean){
+    var strCleaned = '';
+
+    valueToClean = valueToClean.toLowerCase();
+    valueToClean = valueToClean.replace(/á/gi,"a");
+    valueToClean = valueToClean.replace(/é/gi,"e");
+    valueToClean = valueToClean.replace(/í/gi,"i");
+    valueToClean = valueToClean.replace(/ó/gi,"o");
+    valueToClean = valueToClean.replace(/ú/gi,"u");
+    valueToClean = valueToClean.replace(/ñ/gi,"n");
+    valueToClean = valueToClean.replace(/ç/gi,"c");
+    valueToClean = valueToClean.replace(/\s/g,"_");
+
+    return valueToClean;
+}
